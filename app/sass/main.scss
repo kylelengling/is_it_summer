@@ -1,14 +1,14 @@
 // bower:scss
 @import 'bourbon';
-@import 'neat'; 
-// endbower 
+@import 'neat';
+// endbower
 
 $linkColor: #4183C4;
 $hoverColor: lighten($linkColor, 10);
 $borderColor: #b3b3b3;
 
 body {
-	@include outer-container; 
+	@include outer-container;
 	font-family: $helvetica;
 	background-color: #f0f0f0;
 }
@@ -40,7 +40,7 @@ body {
 	a {
 		color: #0081C6;
 		&:hover {
-			color: $hoverColor;	
+			color: $hoverColor;
 		}
 	}
 }
@@ -56,4 +56,18 @@ h3 {
 }
 p {
 	margin-top: 5px;
+}
+
+.main {
+  @include span-columns(12);
+  height: 100vh;
+  @include display(flex);
+  @include align-items(center);
+  @include align-content(center);
+  text-align: center;
+  h1 {
+    width: 100%;
+    @include flex(1);
+    font-size: 5em;
+  }
 }
